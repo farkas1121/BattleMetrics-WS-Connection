@@ -7,7 +7,7 @@ const ACK_COUNT_NEEDED = 3;
 let servers = [];
 
 async function createWebSocket() {
-    const ws = new WebSocket(config.ws);
+    const ws = new WebSocket("wss://ws.battlemetrics.com/");
     const authId = uuid.v1();
     let ackCountLeft = ACK_COUNT_NEEDED;
 
